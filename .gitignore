@@ -64,3 +64,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Firebase key
+toodo-2d742-firebase-adminsdk-pwrwx-7b28809ed8.json
