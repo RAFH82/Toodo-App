@@ -27,7 +27,16 @@ app.put("/todo/:todoId", editTodo);
 app.delete("/todo/:todoId", deleteTodo);
 
 // Users
-const { loginUser, signUpUser } = require("./APIs/users");
+const {
+	loginUser,
+	signUpUser,
+	uploadProfilePhoto,
+	getUserDetail,
+} = require("./APIs/users");
+const auth = require("./util/auth");
+
+app.get("/user", auth, getUserDetail);
 
 app.post("/login", loginUser);
 app.post("/signup", signUpUser);
+app.post("/user/image", auth, uploadProfilePhoto);
