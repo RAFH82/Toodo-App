@@ -25,3 +25,9 @@ app.post("/todo", postOneTodo);
 app.put("/todo/:todoId", editTodo);
 
 app.delete("/todo/:todoId", deleteTodo);
+
+// Users
+const { loginUser, signUpUser } = require("./APIs/users");
+
+app.post("/login", loginUser);
+app.post("/signup", signUpUser);
